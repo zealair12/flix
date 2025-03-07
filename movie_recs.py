@@ -10,8 +10,8 @@ load_dotenv()
 hf_token = os.getenv("HF_API_KEY")
 embedding_url = os.getenv("HF_EMBEDDING_URL")
 
-# MongoDB URI set directly in the script
-mongo_uri = "mongodb+srv://okechukwuzealachonu:ozachonu01@cluster0.fsagn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+# MongoDB URI call
+mongo_uri = os.getenv('MONGO_URI')
 
 # Connect to the database
 client = pymongo.MongoClient(mongo_uri)

@@ -7,7 +7,7 @@ from movie_recs import generate_embedding
 load_dotenv()
 
 # MongoDB URI set directly in the script
-mongo_uri = "mongodb+srv://okechukwuzealachonu:ozachonu01@cluster0.fsagn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+mongo_uri = os.getenv('MONGO_URI')
 
 # Connect to the database
 client = pymongo.MongoClient(mongo_uri)
